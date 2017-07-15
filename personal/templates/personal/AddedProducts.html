@@ -1,0 +1,38 @@
+
+{% extends 'personal/comman.html' %}
+{% block a %}
+
+<div id="page-content-wrapper">
+        <div class="page-content">
+<div class="container-fluid">
+	<h1 style="color:crimson ;border-bottom: 1px solid darkgoldenrod;" class="text-center">Added Products List</h1>
+	
+
+	 <div class="table-responsive">  
+      
+  <table class="table">
+
+    <thead>
+
+     <tr>
+     	<th>Product Name</th>
+     	<th>Product Price</th>
+     </tr>
+    </thead>
+    <tbody>
+             {% for pro in object_list %}  
+       <tr>
+     	<td><a href="{% url 'detail-pro' pro.id %}">{{ pro.product_name }}</a></td>
+        <td>{{ pro.product_price }}</td>
+     </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+</div>
+
+</div>
+
+{% endblock %}
+	

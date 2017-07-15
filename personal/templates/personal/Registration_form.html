@@ -1,0 +1,36 @@
+{% extends 'personal/comman.html' %}
+
+{% block a %}
+<style>
+.col-md-7 {
+    width: 109.33333333%;
+    margin-top: 18%;
+}
+
+.col-md-7  h1
+{
+	margin-bottom: 46px;
+}
+</style>
+
+
+
+
+<div class="col-sm-4 col-md-7 col-sm-offset-2" id="text">
+<h1 class="add col-sm-offset-2">New Registration</h1>
+
+<form class="from-horizontal" action="" method="post">
+    {% csrf_token %}
+
+    {% include 'personal/form_temp.html' %}
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success">Click Me</button>
+        </div>
+
+    </div>
+
+</form>
+</div>
+
+{% endblock %}

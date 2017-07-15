@@ -1,0 +1,43 @@
+{% extends 'personal/comman.html' %}
+<style>
+.btn-primary{
+	margin-top: 10px;
+}
+</style>
+{% block a %}
+
+<div id="page-content-wrapper">
+        <div class="page-content">
+<div class="container-fluid">
+	<h1> Products Details</h1>
+	<div class="col-sm-4 col-md-6">
+	<div class="panel panel-success">
+		 <div class = "panel-heading">
+      <h3>{{ product.product_name }}</h3>
+   </div>
+   <div class = "panel-body">
+      <a href=""><img src="{{ product.product_image.url }}" width="90%" height="40%" /></a>
+		 <a href="{% url 'detail-pro' product.id %}"><button class="btn btn-primary"><i class="fa fa-street-view" aria-hidden="true">View</i></button></a>
+
+        <a href="{% url 'up-pro' product.id %}"><button class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true">update</i></button></a>
+
+
+        <a href="{% url "del-pro" product.id %}"><button class="btn btn-danger"><i class="fa fa-times" aria-hidden="true">Delete</i> </button></a>
+
+		<div class="caption">
+			<h3>Price:<spna class="text-info">{{ product.product_price }}<span></h3>
+	        <h3>Quality:<span class="text-info">{{ product.product_quality}}</span></h3>
+	    </div>
+   </div>
+	    </div>
+		</div>
+		</div>
+	</div>
+</div>
+	
+</div>
+</div>
+
+	
+
+	{% endblock %}

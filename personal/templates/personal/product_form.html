@@ -1,0 +1,21 @@
+{% extends 'personal/comman.html' %}
+
+{% block a %}
+ <div class="col-sm-4 col-md-7 col-sm-offset-3">
+ 	<h1>Add New Products</h1>
+  <form class="from-horizontal" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% include 'personal/form_temp.html' %}
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success">Click Me</button>
+        </div>
+
+    </div>
+
+</form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,26 @@
+<style>
+.control-label {
+	color:indianred;
+  
+}
+
+.col-sm-offset-3{
+	margin-top: 20%;
+  background-color: blanchedalmond;
+  width: 57%;
+  height: 70%;
+}
+</style>
+
+
+{% for field in form %}
+   <div class="form-group">
+     <div class="col-sm-offset-2 col-sm-10">
+         <span class="text-danger small" >{{ field.errors }}</span>
+     </div>
+
+     <label class="control-label col-sm-2">{{ field.label_tag }}</label>
+     <div class="col-sm-10">{{ field }}
+     </div>
+   </div>
+{% endfor %}
